@@ -33,8 +33,8 @@ def prefix (arr: list[str]) -> str:
         char = arr[0][char_index]
         #Loop through all words in array
         for word in arr:
-            #if characters don't match exit
-            if word[char_index] != char:
+            #if current word is on last index or characters don't match exit
+            if char_index >= len(word) or word[char_index] != char:
                 return ans
         # all match, add char to string
         ans += char
